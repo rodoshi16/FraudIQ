@@ -2,8 +2,7 @@
 
 FraudIQ is an intelligent fraud detection tool designed to help financial institutions assess transaction risks. Inspired by **S&P Global’s Market Intelligence platform**, this project provides real-time fraud risk scoring and insightful analytics to enhance financial security.
 
-
-![FD9F1450-51A4-4175-AB38-B3F11CA0D24A](https://github.com/user-attachments/assets/d8d87707-585a-415d-8f54-c4889a5cb1f0)
+![74D6138C-C824-4D42-AFE1-890F549A6E13](https://github.com/user-attachments/assets/f3dd757d-36ef-4663-9136-e8a53e9a3ef4)
 
 ## 🚀 Key Features
 
