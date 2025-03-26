@@ -61,4 +61,5 @@ FraudIQ aligns with **S&P Global’s mission** of delivering data-driven financi
 
 ---
 **Built for financial risk innovation, inspired by S&P Global’s Market Intelligence.** 
+![image](https://github.com/user-attachments/assets/223b49d0-5397-4782-b8cf-3473bc50bd0f)
 
