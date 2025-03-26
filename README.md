@@ -13,7 +13,7 @@ FraudIQ is an intelligent fraud detection tool designed to help financial instit
 - **S&P Global-Inspired UI**: The dashboard adopts a sleek, professional design influenced by S&P Global’s branding.
 - **Market Intelligence Integration**: Includes a dedicated **Market Intelligence** button that redirects users to S&P Global’s Market Intelligence platform for further financial insights.
 
-## 🏗️ Tech Stack
+## 🧑‍💻 Tech Stack
 
 - **Frontend**: React.js (Styled to reflect S&P Global’s Market Intelligence UI)
 - **Backend**: Flask (REST API for transaction risk analysis)
