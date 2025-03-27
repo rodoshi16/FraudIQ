@@ -1,70 +1,64 @@
-# Getting Started with Create React App
+# FraudIQ - ML Risk Analysis tool 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+FraudIQ is an intelligent fraud detection tool designed to help financial institutions assess transaction risks. Inspired by **S&P Global’s Market Intelligence platform**, this project provides real-time fraud risk scoring and insightful analytics to enhance financial security.
 
-## Available Scripts
+![74D6138C-C824-4D42-AFE1-890F549A6E13](https://github.com/user-attachments/assets/f3dd757d-36ef-4663-9136-e8a53e9a3ef4)
 
-In the project directory, you can run:
+## 🚀 Key Features
 
-### `npm start`
+- **Logistic Regression Model**: Implements a Logistic Regression Machine Learning model trained with a dataset of 284,807 transactions with a validation accuracy of **97.5%**
+- **Risk Scoring System**: Assigns a probability-based fraud risk score (0-100) to transactions.
+- **Real-Time Fraud Analysis**: Processes transaction data and provides instant risk assessments.
+- **Explainability with SHAP**: Offers insights into the key factors influencing fraud classification.
+- **S&P Global-Inspired UI**: The dashboard adopts a sleek, professional design influenced by S&P Global’s branding.
+- **Market Intelligence Integration**: Includes a dedicated **Market Intelligence** button that redirects users to S&P Global’s Market Intelligence platform for further financial insights.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 🧑‍💻 Tech Stack
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Frontend**: React.js (Styled to reflect S&P Global’s Market Intelligence UI)
+- **Backend**: Flask (REST API for transaction risk analysis)
+- **Machine Learning**: Logistic Regression with **SMOTE** for handling class imbalance
 
-### `npm test`
+## 📊 How It Works
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+1. **Transaction Input**: Users enter transaction details (Amount & Time).
+2. **Risk Prediction**: The logistic regression model calculates a risk score and categorizes transactions as Low, Medium, or High risk.
+3. **Insights Dashboard**: View risk distribution through interactive charts styled after S&P Global’s **Market Intelligence** UI.
+4. **Market Intelligence Access**: A **Market Intelligence** button redirects users to **S&P Global’s Market Intelligence platform** for additional financial insights.
 
-### `npm run build`
+## 🖥️ Installation & Setup
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```bash
+# Clone the repository
+git clone https://github.com/your-username/FraudIQ.git
+cd FraudIQ
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+# Install dependencies
+pip install -r requirements.txt
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+# Run the backend
+python app.py
 
-### `npm run eject`
+# Navigate to frontend and start React app
+cd client
+npm install
+npm start
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 🤝 Why FraudIQ for S&P Global?
+FraudIQ aligns with **S&P Global’s mission** of delivering data-driven financial insights by offering:
+- **Market Intelligence-Inspired Risk Analysis**
+- **Real-Time Decision Support for Financial Transactions**
+- **Direct Access to Market Intelligence Insights**
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+---
+### 🚀 Future Enhancements
+- Integrating deep learning models for advanced fraud detection.
+- Expanding API capabilities for broader financial applications.
+- Incorporating external financial data sources for enhanced risk modeling.
 
-## Learn More
+---
+**Built for financial risk innovation, inspired by S&P Global’s Market Intelligence.** 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
