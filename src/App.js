@@ -39,11 +39,14 @@ const FraudIQDashboard = () => {
       body: JSON.stringify(transactionData)
     }); 
 
+    console.log("Response status:", response.status);
     const result = await response.json();
+    console.log("Received:", result); 
+
 
     if (response.ok) {
-      setRiskScore(result["Risk Score (%)"]); 
-      setRiskLevel(result["Risk Level"])
+      setRiskScore(result["Risk score"]); 
+      setRiskLevel(result["Risk level"])
 
     } else {
       alert(`Error: ${result.error}`);
@@ -60,7 +63,6 @@ const handleMarket = () => {
 
 }
 
-
   return (
     <div className="Container">
       <h1>FraudIQ Dashboard</h1>
@@ -71,7 +73,7 @@ const handleMarket = () => {
           placeholder="Transaction Amount"
           value={transactionAmount}
           onChange={(e) => setTransactionAmount(e.target.value)}
-        />
+        /> 
         <input
         type="number"
         placeholder="Transaction Time"
@@ -88,7 +90,7 @@ const handleMarket = () => {
         <h3>Risk Distribution</h3>
         <ResponsiveContainer width="100%" height={200}>
           <BarChart data={riskData}>
-            <XAxis dataKey={riskData}/>
+            <XAxis dataKey={"name"}/>
             <YAxis/>
             <Tooltip/>
             <Bar dataKey="value" fill="#D6002A" />
@@ -108,11 +110,3 @@ const handleMarket = () => {
 }
 
 export default FraudIQDashboard; 
-
-
-
-//readme -> take transaction amount and time and returns a risk score (risk analysis and categories high, low, medium)
-// ml model trained in the backend which does that 
-// it has a button for S&P market intelligence which takes users to to the platform to they can learn more about it 
-
-//FraudIQ
