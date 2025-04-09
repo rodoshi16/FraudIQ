@@ -4,6 +4,9 @@ FraudIQ is an intelligent fraud detection tool designed to help financial instit
 
 ![74D6138C-C824-4D42-AFE1-890F549A6E13](https://github.com/user-attachments/assets/f3dd757d-36ef-4663-9136-e8a53e9a3ef4)
 
+![BC04E430-7F05-4793-9943-57FFB1EFA756](https://github.com/user-attachments/assets/d5355103-a53d-4e06-bd32-f1fb2f1bd9b0)
+
+
 ## 🚀 Key Features
 
 - **Logistic Regression Model**: Implements a Logistic Regression Machine Learning model trained with a dataset of 284,807 transactions with a validation accuracy of **97.5%**
