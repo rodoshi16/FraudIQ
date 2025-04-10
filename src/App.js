@@ -31,7 +31,7 @@ const FraudIQDashboard = () => {
         Time: transactionTime, 
       }; 
 
-    const response = await fetch('http://127.0.0.1:5000/predict', {
+    const response = await fetch('http://localhost:5000/predict', {
       method: 'POST', 
       headers: {
         'Content-Type': 'application/json', 
@@ -47,6 +47,12 @@ const FraudIQDashboard = () => {
     if (response.ok) {
       setRiskScore(result["Risk score"]); 
       setRiskLevel(result["Risk level"])
+    
+      setRiskData([
+        { name: "Low Risk", value: 100 - result["Risk score"] }, 
+        { name: "Medium Risk", value: 30 }, 
+        { name: "High Risk", value: result["Risk score"] },
+      ]);
 
     } else {
       alert(`Error: ${result.error}`);
@@ -57,6 +63,47 @@ const FraudIQDashboard = () => {
     console.error(error);
   }
 };
+
+const handleReport = async () => {
+  if (riskScore === null || riskLevel === null) {
+    alert("Please analyze a transaction before generating a report.");
+    return;
+  }
+
+  const reportData = {
+    Amount: transactionAmount,
+    Time: transactionTime,
+    "Risk score": riskScore,
+    "Risk level": riskLevel,
+  };
+
+  try {
+    const response = await fetch("http://localhost:5000/generate-report", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(reportData),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to generate report.");
+    }
+
+    const blob = await response.blob();
+    const url = window.URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "fraud_report.pdf";
+    a.click();
+    window.URL.revokeObjectURL(url);
+  } catch (error) {
+    console.error("Error generating report:", error);
+    alert("An error occurred while generating the report.");
+  }
+};
+
 
 const handleMarket = () => {
   window.open("https://www.spglobal.com/marketintelligence/en/", "_blank");
@@ -102,9 +149,12 @@ const handleMarket = () => {
         <h3>Result Analysis</h3>
         <p>Risk Score: {riskScore}%</p>
         <p>Risk Level: {riskLevel}</p>
+        <button onClick={handleReport} className="Report">Generate Report</button>
       </div>
       </div>
+      <div className="FooterButton">
       <button onClick={handleMarket} className="Market" >S&P Market Intelligence </button>
+      </div>
     </div>
   ); 
 }
