@@ -11,7 +11,7 @@ FraudIQ is an intelligent fraud detection tool designed to help financial instit
 - **Logistic Regression Model**: Implements a Logistic Regression Machine Learning model trained with a dataset of 284,807 transactions with a validation accuracy of **97.5%**
 - **Risk Scoring System**: Assigns a probability-based fraud risk score (0-100) to transactions.
 - **Real-Time Fraud Analysis**: Processes transaction data and provides instant risk assessments.
-- **Explainability with SHAP**: Offers insights into the key factors influencing fraud classification.
+- **Risk Summary Report**: Click Generate Report to instantly view the Total number of transactions, Percentage of High, Medium and Low Risk along with the Average and Max scores. 
 - **S&P Global-Inspired UI**: The dashboard adopts a sleek, professional design influenced by S&P Global’s branding.
 - **Market Intelligence Integration**: Includes a dedicated **Market Intelligence** button that redirects users to S&P Global’s Market Intelligence platform for further financial insights.
 
